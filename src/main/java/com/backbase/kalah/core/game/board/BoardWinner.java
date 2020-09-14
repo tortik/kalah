@@ -6,6 +6,8 @@ import io.vavr.Tuple2;
 
 import java.util.Optional;
 
+import static com.backbase.kalah.core.GameConstant.*;
+
 class BoardWinner {
 
     private BoardItem board;
@@ -21,8 +23,8 @@ class BoardWinner {
 
         Kalah secondPlayerStore = emptyHomes == board.getFirstStore() ? board.getSecondStore() : board.getFirstStore();
 
-        return emptyHomes.getStones() > 36 ? Optional.of(new Tuple2<>(emptyHomes.getOwner(), emptyHomes.getStones()))
-                : Optional.of(new Tuple2<>(secondPlayerStore.getOwner(), 72 - emptyHomes.getStones()));
+        return emptyHomes.getStones() > PLAYER_STONES_NUMBER ? Optional.of(new Tuple2<>(emptyHomes.getOwner(), emptyHomes.getStones()))
+                : Optional.of(new Tuple2<>(secondPlayerStore.getOwner(), ALL_STONES_NUMBER - emptyHomes.getStones()));
     }
 
     private boolean firstPlayerFinished() {
@@ -30,11 +32,11 @@ class BoardWinner {
     }
 
     private boolean secondPlayerFinished() {
-        return playerFinished(board, 7);
+        return playerFinished(board, PLAYER_KALAHS_NUMBER);
     }
 
     private boolean playerFinished(BoardItem board, int firstElement) {
-        return board.getKalahs().stream().skip(firstElement).limit(6).allMatch(k -> k.getStones() == 0);
+        return board.getKalahs().stream().skip(firstElement).limit(HOME_KALAHS_NUMBER).allMatch(k -> k.getStones() == 0);
     }
 
 }

@@ -3,7 +3,6 @@ package com.backbase.kalah.core.game.state;
 import com.backbase.kalah.core.game.GameState;
 import com.backbase.kalah.core.game.Player;
 import com.backbase.kalah.core.game.board.BoardAction;
-import com.backbase.kalah.core.game.board.BoardView;
 import com.backbase.kalah.core.game.event.Event;
 import com.backbase.kalah.core.game.event.EventType;
 

@@ -3,6 +3,8 @@ package com.backbase.kalah.core.game.board;
 import com.backbase.kalah.core.game.Kalah;
 import com.backbase.kalah.core.game.Player;
 
+import static com.backbase.kalah.core.GameConstant.ALL_KALAHS_NUMBER;
+
 class BoardMove {
 
     private BoardItem board;
@@ -47,7 +49,7 @@ class BoardMove {
     }
 
     private int getOppositeKalah(int lastKalahIdx) {
-        return 14 - lastKalahIdx;
+        return ALL_KALAHS_NUMBER - lastKalahIdx;
     }
 
     private Kalah placeStones(Player current, int internalIndex) {
@@ -67,7 +69,7 @@ class BoardMove {
     }
 
     private int getInternalIndex(int kalahIndex) {
-        return kalahIndex % 14;
+        return kalahIndex % ALL_KALAHS_NUMBER;
     }
 
 

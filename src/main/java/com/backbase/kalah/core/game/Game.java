@@ -8,6 +8,8 @@ import com.backbase.kalah.core.game.state.WaitingSecondPlayerState;
 import java.util.Map;
 import java.util.UUID;
 
+import static com.backbase.kalah.core.GameConstant.PLAYER_KALAHS_NUMBER;
+
 public class Game {
     private String id;
     private GameState state;
@@ -64,7 +66,7 @@ public class Game {
         if (one.equals(current)) {
             return new Event<>(EventType.PLAYER_ONE_MOVE, userSpecificKalahIndex, current);
         } else {
-            return new Event<>(EventType.PLAYER_TWO_MOVE, userSpecificKalahIndex, current);
+            return new Event<>(EventType.PLAYER_TWO_MOVE, userSpecificKalahIndex + PLAYER_KALAHS_NUMBER, current);
         }
     }
 

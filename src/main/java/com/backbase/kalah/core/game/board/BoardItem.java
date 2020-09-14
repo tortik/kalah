@@ -8,6 +8,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.IntStream;
 
+import static com.backbase.kalah.core.GameConstant.HOME_KALAHS_NUMBER;
+
 class BoardItem {
     private final List<Kalah> kalahs;
     private final Kalah firstStore;
@@ -41,6 +43,6 @@ class BoardItem {
     }
 
     private void addKalahHome(List<Kalah> kalahs, Player p, int startFrom) {
-        IntStream.range(startFrom, startFrom + 6).forEach(i -> kalahs.add(new Kalah(KalahType.HOME, p, i)));
+        IntStream.range(startFrom, startFrom + HOME_KALAHS_NUMBER).forEach(i -> kalahs.add(new Kalah(KalahType.HOME, p, i)));
     }
 }
