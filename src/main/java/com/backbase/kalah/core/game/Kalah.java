@@ -1,5 +1,7 @@
 package com.backbase.kalah.core.game;
 
+import java.util.Objects;
+
 public class Kalah {
     private final KalahType kalahType;
     private final Player owner;
@@ -47,4 +49,19 @@ public class Kalah {
         this.stones += stones;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Kalah kalah = (Kalah) o;
+        return stones == kalah.stones &&
+                index == kalah.index &&
+                kalahType == kalah.kalahType &&
+                Objects.equals(owner, kalah.owner);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(kalahType, owner, stones, index);
+    }
 }
