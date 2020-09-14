@@ -2,6 +2,7 @@ package com.backbase.kalah.adapter.http;
 
 import com.backbase.kalah.core.GameService;
 import com.backbase.kalah.core.game.Player;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -14,6 +15,7 @@ import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/api/v1/games")
+@SecurityRequirement(name = "api")
 public class GameController {
 
     private GameService gameService;

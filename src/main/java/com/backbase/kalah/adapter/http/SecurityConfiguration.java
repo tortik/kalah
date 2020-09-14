@@ -25,7 +25,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.authorizeRequests()
-                .antMatchers("/api/v1/registration**","/swagger-ui/**", "/reflectoring-openapi/**").permitAll()
+                .antMatchers("/api/v1/registration**","/swagger-ui/**", "/openapi/**").permitAll()
                 .anyRequest().authenticated()
                 .and().formLogin().defaultSuccessUrl("/api/v1/games")
                 .and().httpBasic()
