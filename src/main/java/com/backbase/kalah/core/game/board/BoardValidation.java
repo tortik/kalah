@@ -4,11 +4,11 @@ import com.backbase.kalah.core.game.Kalah;
 import com.backbase.kalah.core.game.Player;
 import com.backbase.kalah.core.game.board.validation.BoardGetStonesValidation;
 import com.backbase.kalah.core.game.board.validation.BoardPlaceValidation;
-import com.backbase.kalah.core.game.exception.BoardValidationException;
 import com.backbase.kalah.core.game.board.validation.entry.EmptyKalah;
 import com.backbase.kalah.core.game.board.validation.entry.KalahStore;
 import com.backbase.kalah.core.game.board.validation.entry.OpponentKalah;
 import com.backbase.kalah.core.game.board.validation.move.KalahOpponentStore;
+import com.backbase.kalah.core.game.exception.BoardValidationException;
 import io.vavr.control.Either;
 
 import java.util.List;

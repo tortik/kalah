@@ -13,6 +13,7 @@ public class Event<T> {
         this.data = data;
         this.player = player;
     }
+
     public Event(EventType eventType, Player player) {
         this.eventType = eventType;
         this.player = player;

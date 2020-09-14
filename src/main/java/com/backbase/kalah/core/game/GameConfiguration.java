@@ -9,7 +9,7 @@ import org.springframework.context.annotation.Configuration;
 public class GameConfiguration {
 
     @Bean
-    AuthorizationService authorizationService(){
+    AuthorizationService authorizationService() {
         return new BasicAuthorizationService();
     }
 }

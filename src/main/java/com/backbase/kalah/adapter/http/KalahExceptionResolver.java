@@ -1,6 +1,9 @@
 package com.backbase.kalah.adapter.http;
 
-import com.backbase.kalah.core.game.exception.*;
+import com.backbase.kalah.core.game.exception.BoardValidationException;
+import com.backbase.kalah.core.game.exception.FailedToJoinException;
+import com.backbase.kalah.core.game.exception.GameNotFound;
+import com.backbase.kalah.core.game.exception.UnauthorizedException;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import org.springframework.core.Ordered;

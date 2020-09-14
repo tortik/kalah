@@ -1,6 +1,6 @@
 package com.backbase.kalah.core.game.exception;
 
-public class KalahException extends RuntimeException{
+public class KalahException extends RuntimeException {
 
     public KalahException(String message) {
         super(message);

@@ -16,6 +16,7 @@ public class InMemoryUserService implements UserDetailsService, RegistrationServ
     private Map<String, UserDetails> users;
 
     private PasswordEncoder passwordEncoder;
+
     public InMemoryUserService(PasswordEncoder passwordEncoder) {
         this.passwordEncoder = passwordEncoder;
         users = new ConcurrentHashMap<>();

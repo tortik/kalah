@@ -31,10 +31,10 @@ public class FirstPlayerTurnState implements GameState {
         boolean additionalMove = boardAction.move(event.getData(), event.getPlayer());
 
         Optional<Tuple2<Player, Integer>> winner = boardAction.getWinner();
-        if(winner.isPresent()){
+        if (winner.isPresent()) {
             return new GameOveState(winner.get()._1(), winner.get()._2(), boardAction);
         }
-        if(!additionalMove) return new SecondPlayerMove(boardAction);
+        if (!additionalMove) return new SecondPlayerMove(boardAction);
         return this;
     }
 

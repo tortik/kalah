@@ -9,6 +9,7 @@ public class Kalah {
     public Kalah(KalahType kalahType, Player owner, int index) {
         this(kalahType, owner, index, 6);
     }
+
     public Kalah(KalahType kalahType, Player owner, int index, int stones) {
         this.kalahType = kalahType;
         this.owner = owner;

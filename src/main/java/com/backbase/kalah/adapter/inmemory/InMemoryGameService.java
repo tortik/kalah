@@ -8,7 +8,8 @@ import com.backbase.kalah.core.game.event.EventType;
 import com.backbase.kalah.core.game.exception.GameNotFound;
 import com.backbase.kalah.core.game.exception.UnauthorizedException;
 
-import java.util.*;
+import java.util.List;
+import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;

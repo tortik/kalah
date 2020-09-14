@@ -10,12 +10,12 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 public class InMemoryConfiguration {
 
     @Bean
-    GameService gameService(AuthorizationService authorizationService){
+    GameService gameService(AuthorizationService authorizationService) {
         return new InMemoryGameService(authorizationService);
     }
 
     @Bean
-    InMemoryUserService userService(PasswordEncoder passwordEncoder){
+    InMemoryUserService userService(PasswordEncoder passwordEncoder) {
         return new InMemoryUserService(passwordEncoder);
     }
 

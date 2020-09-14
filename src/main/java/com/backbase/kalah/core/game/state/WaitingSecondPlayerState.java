@@ -26,7 +26,7 @@ public class WaitingSecondPlayerState implements GameState {
 
     @Override
     public GameState next(Event<Integer> event) {
-        if(event.getEventType() == PLAYER_JOINED){
+        if (event.getEventType() == PLAYER_JOINED) {
             return new FirstPlayerTurnState(new BoardAction(one, event.getPlayer()));
         }
         return this;
