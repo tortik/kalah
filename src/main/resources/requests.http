@@ -1,0 +1,31 @@
+###
+# Login test2 user
+#          curl --location --request POST 'http://localhost:8080/login'
+#          --form 'username=test'
+#          --form 'password=test'
+POST http://localhost:8080/login
+Content-Type: multipart/form-data; boundary=WebAppBoundary
+
+--WebAppBoundary
+Content-Disposition: form-data; name="username"
+
+test2
+--WebAppBoundary
+Content-Disposition: form-data; name="password"
+
+test
+--WebAppBoundary--
+
+###
+#Join the game
+#          curl --location --request PUT 'http://localhost:8080/api/v1/games/aba3752a-8b72-47fa-82d8-2bdbaa175b39'
+PUT http://localhost:8080/api/v1/games/7e650da0-a1c4-4c2f-a9a6-e69ee71accf9
+
+###
+# Make a move
+#          curl --location --request PUT 'http://localhost:8080/api/v1/games/aba3752a-8b72-47fa-82d8-2bdbaa175b39/pits/1'
+PUT http://localhost:8080/api/v1/games/7e650da0-a1c4-4c2f-a9a6-e69ee71accf9/pits/5
+
+
+
+
