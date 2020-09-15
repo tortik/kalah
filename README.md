@@ -10,6 +10,9 @@ Application starts on 8080 port
 
 ```java -jar ./target/kalah-0.0.1-SNAPSHOT.jar``` 
 
+Docker run:
+```./run.sh```
+
 ## Api documentation and Try It
 ```http://localhost:8080/swagger-ui/index.html?configUrl=/openapi/swagger-config#/```
 
