@@ -9,9 +9,9 @@ public interface GameService {
 
     String createGame(Player player);
 
-    Map<Integer, String> move(String id, Player player, Integer pitIndex);
+    Map<Integer, String> move(String gameId, Player player, Integer pitIndex);
 
-    boolean join(String id, Player second);
+    boolean join(String gameId, Player second);
 
     List<String> findGamesToJoin();
 

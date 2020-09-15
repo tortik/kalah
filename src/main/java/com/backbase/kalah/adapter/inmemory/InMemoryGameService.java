@@ -35,14 +35,14 @@ public class InMemoryGameService implements GameService {
     }
 
     @Override
-    public Map<Integer, String> move(String id, Player player, Integer pitIndex) {
-        isGameExist(id);
+    public Map<Integer, String> move(String gameId, Player player, Integer pitIndex) {
+        isGameExist(gameId);
 
         Map<Integer, String> boardView;
-        Lock gameLock = locks.get(id);
+        Lock gameLock = locks.get(gameId);
         try {
             gameLock.lock();
-            Game game = games.get(id);
+            Game game = games.get(gameId);
             isPlayerAuthorizedToMove(player, game);
             boardView = game.move(player, pitIndex);
         } finally {
@@ -53,12 +53,12 @@ public class InMemoryGameService implements GameService {
 
 
     @Override
-    public boolean join(String id, Player second) {
-        isGameExist(id);
-        Lock gameLock = locks.get(id);
+    public boolean join(String gameId, Player second) {
+        isGameExist(gameId);
+        Lock gameLock = locks.get(gameId);
         try {
             gameLock.lock();
-            Game game = games.get(id);
+            Game game = games.get(gameId);
 
             return game.join(second);
         } finally {

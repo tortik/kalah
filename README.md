@@ -10,9 +10,6 @@ Application starts on 8080 port
 
 ```java -jar ./target/kalah-0.0.1-SNAPSHOT.jar``` 
 
-## Examples
-In application present postman collection for first user and ```requests.http``` for second user  
-
-## Api documentation
+## Api documentation and Try It
 ```http://localhost:8080/swagger-ui/index.html?configUrl=/openapi/swagger-config#/```
 
